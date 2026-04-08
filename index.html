@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Příbramská drbna</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container2 header-content">
+        <div class="brand">
+            <img id="logo" src="logo.png" alt="Logo">
+            <h1>Příbramská drbna</h1>
+        </div>
+        <nav>
+            <a href="#">Magazín</a>
+            <span class="nav-sep" aria-hidden="true"></span>
+            <a class="shop-link" href="eshop.html">E-shop</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+            <a href="article-hero-1.html" class="hero-card">
+                <div class="hero-image"><img src="395.png" alt=""></div>
+                <div class="hero-content">
+                    <div class="category">Hlavní zpráva</div>
+                    <h2>Linka 395 zavádí tichou zónu. Hluční cestující mohou vystoupit už ve Voznici</h2>
+                    <p>Linka 395 z Příbrami zavádí tichou zónu bez výjimek. Dopravce chce omezit hlučné debaty během jízdy a varuje, že kdo neudrží hlas pod kontrolou, může skončit už ve Voznici.</p>
+                    <span class="btn">Číst více</span>
+                </div>
+            </a>
+            <a href="article-hero-2.html" class="hero-card">
+                <div class="hero-image"><img src="pivo.png" alt=""></div>
+                <div class="hero-content">
+                    <div class="category">Hlavní zpráva</div>
+                    <h2>ŠOK V PŘÍBRAMI: Muž chtěl skutečně jen jedno pivo, město je na nohou</h2>
+                    <p>Místní štamgasti i obsluha jsou v těžkém šoku. V jedné z příbramských hospod došlo k události, která nemá v dějinách českého pivovarnictví obdoby. Policie je v pohotovosti.</p>
+                    <span class="btn">Číst více</span>
+                </div>
+            </a>
+            <a href="article-hero-3.html" class="hero-card">
+                <div class="hero-image"><img src="gympl.png" alt=""></div>
+                <div class="hero-content">
+                    <div class="category">Hlavní zpráva</div>
+                    <h2>KYBERVÁLKA V PŘÍBRAMI: Průmyslovka „shodila“ gymnázium, prý šlo o charitu</h2>
+                    <p>Studenti místního gymnázia se včera ocitli v digitální době kamenné. Výpadek sítě WiFi nebyl náhodou, ale cíleným zásahem budoucích IT expertů z nedaleké průmyslovky.</p>
+                    <span class="btn">Číst více</span>
+                </div>
+            </a>
+            <a href="article-hero-4.html" class="hero-card">
+                <div class="hero-image"><img src="dubno.png" alt=""></div>
+                <div class="hero-content">
+                    <div class="category">Hlavní zpráva</div>
+                    <h2>DUBENSKÁ ROMANTIKA: Žádné šerpy, tady voní nafta a pálí se spojky</h2>
+                    <p>Zatímco maturanti na gymnáziích ladí barvu kravat a střihy plesových šatů, na Dubně se řeší skutečné životní výzvy. Místní areál ovládla drsná atmosféra, kde je víc než společenský etiketa ceněna funkční technika.</p>
+                    <span class="btn">Číst více</span>
+                </div>
+            </a>
+
+        <div class="carousel-nav">
+            <button class="carousel-btn" onclick="prevSlide()" title="Předchozí">&#10094;</button>
+            <div class="carousel-indicators">
+                <span class="carousel-indicator" onclick="goToSlide(0)"></span>
+                <span class="carousel-indicator" onclick="goToSlide(1)"></span>
+                <span class="carousel-indicator" onclick="goToSlide(2)"></span>
+                <span class="carousel-indicator" onclick="goToSlide(3)"></span>
+            </div>
+            <button class="carousel-btn" onclick="nextSlide()" title="Další">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+<section class="articles">
+    <div class="container2">
+        <h3>Nejnovější články za poslední 2 týdny</h3>
+        <div class="grid">
+            <a href="article-1.html" class="card">
+                <div class="card-image"><img src="article1.png" alt=""></div>
+                <div class="card-content">
+                    <div class="category">Kultura</div>
+                    <h4>LEGO tajně připravuje exkluzivní limitovanou</h4>
+                    <p></p>
+                </div>
+            </a>
+            <a href="article-2.html" class="card">
+                <div class="card-image"><img src="article2.png" alt=""></div>
+                <div class="card-content">
+                    <div class="category">Sport</div>
+                    <h4>Punkoví králové se shodli!</h4>
+                    <p></p>
+                </div>
+            </a>
+            <a href="article-3.html" class="card">
+                <div class="card-image"><img src="article3.png" alt=""></div>
+                <div class="card-content">
+                    <div class="category">Sport</div>
+                    <h4>F1 se pojde v příbrami!</h4>
+                    <p></p>
+                </div>
+            </a>
+            <a href="article-4.html" class="card">
+                <div class="card-image"><img src="article4.png" alt=""></div>
+                <div class="card-content">
+                    <div class="category">Školy</div>
+                    <h4>V umělecké škole vypukl nechtěný souboj žánrů.</h4>
+                    <p></p>
+                </div>
+            </a>
+            <a href="article-5.html" class="card">
+                <div class="card-image"><img src="article5.png" alt=""></div>
+                <div class="card-content">
+                    <div class="category">Žhavé novinky</div>
+                    <h4>V Brdech u Příbrami rekonstruovali raptora</h4>
+                    <p></p>
+                </div>
+            </a>
+             <a href="article-6.html" class="card">
+                <div class="card-image"><img src="article6.png" alt=""></div>
+                <div class="card-content">
+                    <div class="category">Kultura</div>
+                    <h4>V šachtách pod městem funguje pop-up klub.</h4>
+                    <p></p>
+                </div>
+            </a>
+            <a href="article-7.html" class="card">
+                <div class="card-image"><img src="article7.png" alt=""></div>
+                <div class="card-content">
+                    <div class="category">Sport</div>
+                    <h4>Příbramský bazén čeká unikátní proměna.</h4>
+                    <p></p>
+                </div>
+            </a>
+           
+            <a href="article-8.html" class="card">
+                <div class="card-image"><img src="article8.png" alt=""></div>
+                <div class="card-content">
+                    <div class="category">Kultura</div>
+                    <h4>Svatá Hora pořádně otřese v rytmu Pink Floyd</h4>
+                    <p></p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    © 2026 Příbramská drbna |
+    <a href = "Kontakt.html" class = "kontaktBtn">Kontakt</a>
+    |
+    <a href = "O nás.html" class = "kontaktBtn">O nás</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+ 

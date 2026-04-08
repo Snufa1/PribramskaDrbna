@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    line-height: 1.6;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background-color: #c40000;
+    color: white;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#logo {
+    width: 64px;
+    height: 64px;
+    display: block;
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.397);
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+.container2 {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    background-color: rgba(180, 180, 180, 0.5);
+    background-image:url('DSC01316.jpg');
+    padding: 40px 0;
+    margin:auto;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-blend-mode:lighten;
+}
+.hero-image {
+    background: #ccc;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    color: #000000;
+}
+
+.hero-card {
+    background: rgb(255, 255, 255);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    width: 1000px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+.hero-card2 {
+    background: rgb(255, 255, 255);
+    padding: 40px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column;
+    margin:auto;
+    width: 100%;
+    height: 100%;
+}
+.hero-card3 {
+    background: rgb(255, 255, 255,0.5);
+    padding: 40px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column;
+    margin:40px;
+    width: 1250px;
+    height: 100%;
+}
+
+.hero-card.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    display: block;
+}
+
+/* Slide animations */
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutToLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideOutToRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.hero-card.slide-in-right {
+    animation: slideInFromRight 0.5s ease forwards;
+}
+
+.hero-card.slide-in-left {
+    animation: slideInFromLeft 0.5s ease forwards;
+}
+
+.hero-card.slide-out-left {
+    animation: slideOutToLeft 0.5s ease forwards;
+}
+
+.hero-card.slide-out-right {
+    animation: slideOutToRight 0.5s ease forwards;
+}
+
+.hero-card:hover {
+    transform: translateY(-5px);
+}
+
+.carousel-nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.carousel-btn {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    background-color: #c40000; 
+    border: none;
+    color: white;
+    padding: 12px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-btn:hover {
+    background-color: #900000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.carousel-btn:active {
+    transform: translateY(-1px);
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.carousel-indicator:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-indicator.active {
+    background-color: white;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-content {
+    padding: 20px;
+}
+.hero-content2 {
+    padding: 20px;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    overflow:hidden;
+    width:300px;
+    height:300px;
+}
+
+
+.category {
+    color: #c40000;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.hero-content h2 {
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #c40000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #900000;
+}
+
+/* ARTICLES GRID */
+.articles {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    flex: 1;
+}
+
+.articles h3 {
+    margin-bottom: 30px;
+    border-bottom: 4px solid #c40000;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(255, 18, 18, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    background: #ddd;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+/* ARTICLE TEMPLATE */
+.article-detail {
+    background: #f2f2f2;
+    padding: 0 0 60px;
+}
+.article-detail h1 {
+    transform:translateY(-40px);
+    align-self:center;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+
+}
+@keyframes PohybKategorií {
+    from {transform:translateX(-1000px)}
+    to {transform:translateX(1000px)}
+}
+.article-box {
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.178);
+    max-width: 900px;
+    align-self:flex-start;    
+    margin:auto;
+    background-color: #eeeeee;
+}
+
+.btn2 {
+    display: inline-block;
+    color:black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 10px;
+
+}
+
+.article-box h1 {
+    margin-bottom: 20px;
+}
+
+.article-box p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.article-meta {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.article-image {
+    background: #ccc;
+    margin: 20px 0;
+    color: #666;
+    overflow: hidden;
+    max-height: 500px;
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.article-box h2 {
+    margin-top: 30px;
+    color: #c40000;
+}
+
+/* ARTICLE PAGES: keep links clickable but not styled as links */
+a.card,
+a.hero-card {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+a.card:hover,
+a.hero-card:hover {
+    text-decoration: none;
+}
+
+/* For article detail pages */
+.article-detail {
+    background: #fff;
+    padding: 40px 0 80px;
+}
+.article-detail main {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 36px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+.article-detail h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+    color: #222;
+}
+.article-detail .article-meta {
+    color: #777;
+    margin-bottom: 18px;
+}
+.article-detail p {
+    margin-bottom: 1em;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Ensure any inline links inside articles inherit color and remove underline */
+.article-detail a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Small utility for back link in header */
+.article-detail header a {
+    color: #c40000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-detail header a:hover {
+    text-decoration: underline;
+}
+.kontaktBtn {
+    color:white;
+}
+
+
+.hero-card2 p{
+    font-size: 20px;
+}
+.hero-card2 h1{
+    font-size: 30px;
+    padding: 40px 0;
+}
+.hero-card2 h4{
+    font-size: 50px;
+}
+
+/* FOOTER */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+}
